@@ -22,7 +22,6 @@ class Staff extends Authenticatable
     protected $fillable = [
         'full_name',
         'email',
-        // 'password',
         'staff_number',
         'faculty',
         'department',
@@ -46,4 +45,15 @@ class Staff extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function faculty(){
+        return $this->hasOne(Faculty::class);
+    }
+
+    public function department(){
+        return $this->hasOne(Department::class);
+    }
+    public function courses(){
+        return $this->hasMany(Course::class);
+    }
 }

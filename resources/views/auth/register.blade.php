@@ -54,13 +54,12 @@
             <div>
                 <x-label for="faculty" :value="__('Faculty')" />
 
-                <div class="col-sm-6">
+                <div class="col-sm-6">                    
                 <select class="form-control" id="faculty" name="faculty" :value="old('faculty')" required focus>
-                    <option value="Administration">Administration</option>        
-                    <option value="Technology">Technology</option>        
-                    <option value="Agriculture">Agriculture</option>        
-                    <option value="Health Science">Health Science</option>        
-                    <option value="" disabled selected>Select Faculty</option>        
+                    <option selected value="">Select</option>
+                    @foreach($faculties as $faculty)
+                     <option value={{$faculty->id}}>{{$faculty->name}}</option>   
+                    @endforeach                 
                 </select>
                 </div>
 
