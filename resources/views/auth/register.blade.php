@@ -10,7 +10,7 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <form method="POST" action="{{ route('register') }}">
-            @csrf
+                @csrf
 
             <!-- First Name -->
             <div>
@@ -55,11 +55,13 @@
                 <x-label for="faculty" :value="__('Faculty')" />
 
                 <div class="col-sm-6">                    
-                <select class="form-control" id="faculty" name="faculty" :value="old('faculty')" required focus>
+                <select class="form-control rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full " id="faculty" name="faculty" :value="old('faculty')" required focus>
                     <option selected value="">Select</option>
+                    
                     @foreach($faculties as $faculty)
                      <option value={{$faculty->id}}>{{$faculty->name}}</option>   
-                    @endforeach                 
+                    @endforeach
+                   
                 </select>
                 </div>
 
@@ -69,8 +71,16 @@
             <!-- Department -->
             <div>
                 <x-label for="department" :value="__('Department')" />
+                <select class="form-control rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full " id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" required focus>
+                    <option selected value="">Select</option>
+                    
+                    @foreach($departments as $department)
+                     <option value={{$department->id}}>{{$department->name}}</option>   
+                    @endforeach
+                   
+                </select>
 
-                <x-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" required autofocus />
+                {{-- <x-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" required autofocus /> --}}
             </div>
 
             <!-- Email Address -->

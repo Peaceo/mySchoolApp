@@ -49,6 +49,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
+        // $request->session()->put(['Peace'=>"Blessed learner"]);
+        // return $request->session()->all();
+
         return redirect('/');
     }
 }

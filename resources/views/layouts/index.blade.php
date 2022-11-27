@@ -1,768 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-    <!-- Basic -->
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Site Metas -->
-    <title>SmartEDU - Education Responsive HTML5 Template</title>  
-    <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Headers · Bootstrap v5.2</title>
 
-    {{-- Bootstrap cdn --}}
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/template/css/bootstrap.min.css')}}">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="{{asset('css/template/css/index.css')}}">
-    <link rel="stylesheet" href="/resources/css/template/css/index.css">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="{{asset('css/template/css/versions.css')}}">
-    <link rel="stylesheet" href="/resources/css/template/css/versions.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{{asset('css/template/css/responsive.css')}}">
-    <link rel="stylesheet" href="/resources/css/template/css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{asset('css/template/css/custom.css')}}">
-    <link rel="stylesheet" href="/resources/css/template/css/custom.css">
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+  <symbol id="speedometer2" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+  </symbol>
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+  </symbol>
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+  <symbol id="grid" viewBox="0 0 16 16">
+    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+  </symbol>
+</svg>
+
+<main>
+  <h1 class="visually-hidden">Headers examples</h1>
+
+  <div class="b-example-divider"></div>
+
+  
+
+  <div class="b-example-divider"></div>
+
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a  href="/home" class="nav-link px-2 link-secondary">DASHBOARD</a></li>
+		<li><a href="index.html" class="nav-link px-2 link-dark">Home</a></li>
+		<li><a href="{{ route('login') }}" class="nav-link px-2 link-dark">Students</a></li>
+		<li><a href="{{ route('login') }}" class="nav-link px-2 link-dark">Staff</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+ 
+
+  <div class="container-fluid pb-3">
+    <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+      <div class="bg-light border rounded-3">
+        <br><br><br><br><br><br><br><br><br><br>
+      </div>
+      <div class="bg-light border rounded-3">
+        <br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
 
 
-    <!-- Modernizer for Portfolio -->
-    <script src="js/modernizer.js"></script>
-    <script src="{{ asset('js/template/js/modernizer.js') }}"></script>
-    <script src="/resources/js/template/js/modernizer.js"></script>
+ 
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+</main>
 
-</head>
-<body class="host_version"> 
 
-	<!-- Modal -->
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header tit-up">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Customer Login</h4>
-			</div>
-			<div class="modal-body customer-box">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs">
-					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
-					<li><a href="#Registration" data-toggle="tab">Registration</a></li>
-				</ul>
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" id="Login">
-						<form role="form" class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email1" placeholder="Name" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10">
-									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
-										Submit
-									</button>
-									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="tab-pane" id="Registration">
-						<form role="form" class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" placeholder="Name" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="password" placeholder="Password" type="password">
-								</div>
-							</div>
-							<div class="row">							
-								<div class="col-sm-10">
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Save &amp; Continue
-									</button>
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Cancel</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	  </div>
-	</div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- LOADER -->
-	<div id="preloader">
-		<div class="loader-container">
-			<div class="progress-br float shadow">
-				<div class="progress__item"></div>
-			</div>
-		</div>
-	</div>
-	<!-- END LOADER -->	
-	
-	<!-- Start header -->
-	<header class="top-navbar">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html">
-					<img src="/../../../public/template/images/logo.png" alt="logo" />
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbars-host">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="/home">DASHBOARD</a></li>
-						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Students</a></li>
-						<li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Staff</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="course-grid-2.html">Course Grid 2 </a>
-								<a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
-								<a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">Blog </a>
-								<a class="dropdown-item" href="blog-single.html">Blog single </a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
-						<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>
-                    </ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- End header -->
-	
-	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
-			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active">
-				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
-					<div class="dtab">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 text-right">
-									<div class="big-tagline">
-										<h2><strong>SmartEDU </strong> education College</h2>
-										<p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
-									</div>
-								</div>
-							</div><!-- end row -->            
-						</div><!-- end container -->
-					</div>
-				</div><!-- end section -->
-			</div>
-			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
-					<div class="dtab">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 text-left">
-									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight">SmartEDU <strong>education school</strong></h2>
-										<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
-									</div>
-								</div>
-							</div><!-- end row -->            
-						</div><!-- end container -->
-					</div>
-				</div><!-- end section -->
-			</div>
-			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
-					<div class="dtab">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 text-center">
-									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company</h2>
-										<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server 
-											Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-											FREE Reboots</p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
-									</div>
-								</div>
-							</div><!-- end row -->            
-						</div><!-- end container -->
-					</div>
-				</div><!-- end section -->
-			</div>
-			<!-- Left Control -->
-			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-				<span class="fa fa-angle-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-
-			<!-- Right Control -->
-			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-				<span class="fa fa-angle-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</div>
-	
-    <div id="overviews" class="section wb">
-        <div class="container">
-            <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <h3>About</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-                </div>
-            </div><!-- end title -->
-        
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h4>2018 BEST SmartEDU education school</h4>
-                        <h2>Welcome to SmartEDU education school</h2>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-			</div>
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <section class="section lb page-section">
-		<div class="container">
-			 <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <h3>Our history</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-                </div>
-            </div><!-- end title -->
-			<div class="timeline">
-				<div class="timeline__wrap">
-					<div class="timeline__items">
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-01">
-								<h2>2018</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-02">
-								<h2>2015</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-03">
-								<h2>2014</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-04">
-								<h2>2012</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-01">
-								<h2>2010</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-02">
-								<h2>2007</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-03">
-								<h2>2004</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-04">
-								<h2>2002</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="section cl">
-		<div class="container">
-			<div class="row text-left stat-wrap">
-				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
-					<p class="stat_count">12000</p>
-					<h3>Students</h3>
-				</div><!-- end col -->
-
-				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
-					<p class="stat_count">240</p>
-					<h3>Courses</h3>
-				</div><!-- end col -->
-
-				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
-					<p class="stat_count">55</p>
-					<h3>Years Completed</h3>
-				</div><!-- end col -->
-			</div><!-- end row -->
-		</div><!-- end container -->
-	</div><!-- end section -->
-
-    <div id="plan" class="section lb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Choose Your Plan</h3>
-                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="message-box">
-                        <ul class="nav nav-pills nav-stacked" id="myTabs">
-                            <li><a class="active" href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
-                            <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
-                        </ul>
-                    </div>
-                </div><!-- end col -->
-            </div>
-
-            <hr class="invis">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="tab-content">
-                        <div class="tab-pane active fade show" id="tab1">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$45</h2>
-                                            <h3>per month</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$59</h2>
-                                            <h3>per month</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$85</h2>
-                                            <h3>per month</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end row -->
-                        </div><!-- end pane -->
-
-                        <div class="tab-pane fade" id="tab2">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$477</h2>
-                                            <h3>Year</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$485</h2>
-                                            <h3>Year</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>$500</h2>
-                                            <h3>Year</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end row -->
-                        </div><!-- end pane -->
-                    </div><!-- end content -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Testimonials</h3>
-                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="testi-carousel owl-carousel owl-theme">
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_01.png" alt="" class="img-fluid">
-                                <h4>James Fernando </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_02.png" alt="" class="img-fluid">
-                                <h4>Jacques Philips </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_03.png" alt="" class="img-fluid ">
-                                <h4>Venanda Mercy </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_01.png" alt="" class="img-fluid">
-                                <h4>James Fernando </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_02.png" alt="" class="img-fluid">
-                                <h4>Jacques Philips </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_03.png" alt="" class="img-fluid">
-                                <h4>Venanda Mercy </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div><!-- end testimonial -->
-                    </div><!-- end carousel -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <div class="parallax section dbcolor">
-        <div class="container">
-            <div class="row logos">
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>About US</h3>
-                        </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>   
-						<div class="footer-right">
-							<ul class="footer-links-soi">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul><!-- end links -->
-						</div>						
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-				<div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Information Link</h3>
-                        </div>
-                        <ul class="footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Pricing</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-				
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Contact Details</h3>
-                        </div>
-
-                        <ul class="footer-links">
-                            <li><a href="mailto:#">info@yoursite.com</a></li>
-                            <li><a href="#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+61 3 8376 6284</li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
-
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-center">                   
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
-
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
-	<script src="js/timeline.min.js"></script>
-	<script>
-		timeline(document.querySelectorAll('.timeline'), {
-			forceVerticalMode: 700,
-			mode: 'horizontal',
-			verticalStartPosition: 'left',
-			visibleItems: 4
-		});
-	</script>
-</body>
+      
+  </body>
 </html>

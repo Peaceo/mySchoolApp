@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Faculty;
+use App\Models\Department;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -23,7 +24,12 @@ class RegisteredUserController extends Controller
     {
         $faculties = Faculty::all();
 
-        return view('auth.register', ['faculties' => $faculties]);
+        /* $faculty = Faculty::find();
+        $departments = $faculty->department; */
+        $departments = Department::all();
+
+        return view('auth.register', ['faculties' => $faculties, 'departments' => $departments]);
+        
     }
 
     /**

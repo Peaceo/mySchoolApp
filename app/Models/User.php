@@ -30,6 +30,8 @@ class User extends Authenticatable
         'matric_number',
         'faculty',
         'department',
+        'faculty_id',
+        'department_id',
     ];
 
     /**
@@ -58,8 +60,8 @@ class User extends Authenticatable
     public function department(){
         return $this->hasOne(Department::class);
     }
-    
+
     public function courses(){
-        return $this->hasMany(Course::class);
+        return $this->belongsToMany(Course::class);
     }
 }

@@ -14,7 +14,10 @@ class Course extends Model
         'course_unit',
         'department_id',
         'is_compulsory',
-
     ];
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 
 }

@@ -39,7 +39,8 @@ Route::get('register2', function(){
 
 Route::get('/dashboard', function () {
     // return view('dashboard');
-    return view('layouts.index');
+    // return view('layouts.index');
+    return view('pages.courses');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -50,6 +51,12 @@ Route::get('staff/register', [App\Http\Controllers\RegisterController::class, 's
 Route::get('/staff', function(){
     return view('uploadResult');
 });
+
+
+Route::get('/courses', [App\Http\Controllers\CourseController::class, 'create']);
+Route::post('/viewRegCourse', [App\Http\Controllers\CourseController::class, 'store']);
+Route::get('/viewResult', [App\Http\Controllers\CourseController::class, 'regCourse']);
+
 
 
 // Multi authentication
@@ -76,46 +83,47 @@ Route::get('/staff', function(){
 
 }); */
 
-Route::get('linkFacultyandDep/{id}', function($id){
-    $faculty = Faculty::find($id);
-    // $departments = Faculty::all();
-     /* foreach($departments as $department){
-        echo $department;
-    } */
-    echo "Lists of departments in the faculty of " . $faculty->name . '<br>'; 
-     foreach($faculty->department as $department){
-        echo $department->name;
-        echo '<br>';
-    }
-    // return $departments;
-});
+// Route::get('linkFacultyandDep/{id}', function($id){
+//     $faculty = Faculty::find($id);
+//     // $departments = Faculty::all();
+//      /* foreach($departments as $department){
+//         echo $department;
+//     } */
+//     echo "Lists of departments in the faculty of " . $faculty->name . '<br>'; 
+//      foreach($faculty->department as $department){
+//         echo $department->name;
+//         echo '<br>';
+//     }
+//     // return $departments;
+// });
 
-Route::get('insertDepartments', function(){
-   /*  $dept = new Department(['name' => 'Basic Medical Sciences']);
-$faculty = Faculty::find(4); 
-$faculty->department()->save($dept);  */
+// Route::get('insertDepartments', function(){
+//    /*  $dept = new Department(['name' => 'Basic Medical Sciences']);
+// $faculty = Faculty::find(4); 
+// $faculty->department()->save($dept);  */
 
 
-$faculty = Faculty::find(12);
+// $faculty = Faculty::find(12);
  
-$faculty->department()->saveMany([
-    new Department(['name' => 'Demograpy Social Statistics']),
-    new Department(['name' => 'Political Science']),
-    new Department(['name' => 'Economics']),
-    new Department(['name' => 'Psychology']),
-    new Department(['name' => 'Geography']),
+// $faculty->department()->saveMany([
+//     new Department(['name' => 'Demograpy Social Statistics']),
+//     new Department(['name' => 'Political Science']),
+//     new Department(['name' => 'Economics']),
+//     new Department(['name' => 'Psychology']),
+//     new Department(['name' => 'Geography']),
     
-]);
-return "Departments has been successfully inserted";
-});
+// ]);
+// return "Departments has been successfully inserted";
+// });
 
-Route::get('addCourses', function(){
-    $department = Department::find(4);
-    $department->courses()->saveMany([
-        new Course(['course_code'=>'POL 203', 'course_title'=> 'Political Thought: Plato to Machiavelli ', 'course_unit'=> 3, 'is_compulsory'=>1]),
-        new Course(['course_code'=>'ECN 201', 'course_title'=> 'Principles of Economics', 'course_unit'=> 3, 'is_compulsory'=>1]),
-        new Course(['course_code'=>'SSC 105 ', 'course_title'=> 'Mathematics for Social Scientists', 'course_unit'=> 3, 'is_compulsory'=>0]),
-        new Course(['course_code'=>'csC 200 ', 'course_title'=> 'Computer Appreciation', 'course_unit'=> 2, 'is_compulsory'=>1]),
-    ]);
-    return "Courses offered by ". $department->name . " has been successfully added";
-});
+// Route::get('addCourses', function(){
+//     $department = Department::find(4);
+//     $department->courses()->saveMany([
+//         new Course(['course_code'=>'POL 203', 'course_title'=> 'Political Thought: Plato to Machiavelli ', 'course_unit'=> 3, 'is_compulsory'=>1]),
+//         new Course(['course_code'=>'ECN 201', 'course_title'=> 'Principles of Economics', 'course_unit'=> 3, 'is_compulsory'=>1]),
+//         new Course(['course_code'=>'SSC 105 ', 'course_title'=> 'Mathematics for Social Scientists', 'course_unit'=> 3, 'is_compulsory'=>0]),
+//         new Course(['course_code'=>'csC 200 ', 'course_title'=> 'Computer Appreciation', 'course_unit'=> 2, 'is_compulsory'=>1]),
+//     ]);
+//     return "Courses offered by ". $department->name . " has been successfully added";
+// });
+

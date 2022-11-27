@@ -21,8 +21,8 @@ class AddMoreFieldsToUserTable extends Migration
             $table->string('username')->unique();
             $table->date('dob');
             $table->string('matric_number');
-            $table->string('faculty');
-            $table->string('department');
+            $table->string('faculty')->nullable();
+            $table->string('department')->nullable();
 
         });
     }
